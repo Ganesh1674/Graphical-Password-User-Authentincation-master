@@ -1,27 +1,24 @@
 # Graphical Password Authentincation
+## Inspiration:
+The inspiration behind the development of a Graphical Password Authentication system is to provide an alternative method of authentication that is more secure than traditional text-based passwords, which are vulnerable to social engineering attacks.
 
-## Introduction
-A Graphical Password Authentication system is an authentication system that uses some combination of graphical images replacing the regular passwords. Graphical passwords may offer better security than text-based passwords because most of the people use regular, popular passwords everywhere and are prone to social engineering attacks. So graphical passwords can put stop to many attacks of this kind.
+## What does it do:
+The system uses graphical images in place of regular passwords for authentication. It is resistant to popular attacks such as brute force, shoulder surfing, spyware, hidden camera, and phishing.
 
-<br>
+## Challenges we faced:
+One of the major challenges was to design a system that was both secure and user-friendly. We also had to address the issue of potential attacks from adversaries who might attempt to steal the user's graphical password.
 
-## Resistance to Popular Attacks
-### Bruteforce
-After reaching max tries, the user will be notified via message through email. And the further authentication through the generic URL/website is disabled for that user account, instead, they have to use the link that will be sent by the company in the notification email. This also lets the legitimate user know about the adversary. 
+## How we built it:
+We built the system using Django, Bootstrap, HTML5, CSS3, and JavaScript. We also used the Courier API to manage notifications. The system uses a combination of face recognition and mouse events to authenticate the user.
 
-### Shoulder Surfing
-Shoulder surfing is a type of social engineering technique used to obtain information such as personal identification numbers (PINs), passwords and other confidential data by looking over the victim's shoulder. The system we adopt is similar to the Phone pattern system. The pattern is invisible on the screen when the users draw it. This makes it incredibly tough for the adversary to see the images on the grid that the user clicks.
+## Features:
+Some of the features of the system include a hidden pattern on the screen, a camera to detect the user's face during authentication, and the ability to send notifications to the user if there are multiple failed attempts to log in.
 
-### Spyware
-Graphical password systems resist spyware more easily than regular passwords. Key-loggers secretly capture keystrokes and transfer, but if the spyware wants to track the mouse movements, it can be tracked, but the adversary wouldn’t know which part of the mouse event is actually the graphical password. The timeline vs mouse-event graph is too difficult to get the pattern
+## Tech stack:
+The technology stack used in building the Graphical Password Authentication system includes Django, Bootstrap, HTML5, CSS3, JavaScript, and the Courier API.
 
-### Hidden Camera
-There will be a camera in front of the user which identifies a face while authentication i.e., the number of pixels the face occupies should be 80-90% of the total pixels in the current frame and if this condition is not satisfied then the screen does not show the graphical password. It alerts the user to cover the screen with a proper posture. But this will be a costly operation. 
-
-### Phishing
-Since the adversary is made to believe that the password is a set of images, it’s not possible to make a fake page, since the adversary thinks he doesn’t know the images. Moreover, we restrict the user to one attempt and suggest the user to give a fake password every time so that he triggers the server to send and URL in email so that he can log in through the legitimate login page, and the adversary cannot send the URL to users from a legitimate server. However, when the adversary knows the technique this attack might be still possible. 
-
-<br>
+## Future goals:
+Some future goals for the system include improving the security and user-friendliness of the system, and developing new techniques to make the system even more secure against potential attacks.
 
 ## Screenshots
 Welcome Page
@@ -53,4 +50,7 @@ Account blocked due to multiple Failed attempts
 <br>
 
 #### Thank you
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
 
